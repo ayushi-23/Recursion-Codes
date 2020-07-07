@@ -2,7 +2,7 @@
 
 /*
 author : Ayushi Saxena
-Problem statement : Reverse of a number
+Problem statement : Check whether a String is palindrome or not
 */
 
 

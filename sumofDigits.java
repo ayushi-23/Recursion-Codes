@@ -2,7 +2,7 @@
 
 /*
 author : Ayushi Saxena
-Problem statement : Reverse of a number
+Problem statement : Find sum of digits recursively
 */
 
 import java.util.*;

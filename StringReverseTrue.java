@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /*
 author : Ayushi Saxena
-Problem statement : Reverse of a number
+Problem statement : Check whether 2 strings are reverse of each other or not
 */
 
 public class StringReverseTrue {

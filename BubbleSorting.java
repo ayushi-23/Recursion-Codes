@@ -1,7 +1,7 @@
 
 /*
 author : Ayushi Saxena
-Problem statement : Reverse of a number
+Problem statement : Bubble sort using iterative and recursive methods
 */
 
 public class BubbleSorting {

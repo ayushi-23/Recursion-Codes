@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /*
 author : Ayushi Saxena
-Problem statement : Reverse of a number
+Problem statement : Print geometric series
 */
 
 public class GeometricSeries {

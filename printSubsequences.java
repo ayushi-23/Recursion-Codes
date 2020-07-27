@@ -9,19 +9,22 @@ public class printSubsequences {
 	
 	//function to find subsequences of String : Method 1 Space complexity O(2^n)
 	
-	public static String[] getSubsequencesOfString(String str) {
+	public static String[] getSubsequencesOfString(String str,int k) {
 		if(str.length()==0)
 			{String ans[] = {""};
 			return ans;}
 		
-		String out[] = getSubsequencesOfString(str.substring(1));
+		String out[] = getSubsequencesOfString(str.substring(1),k);
+		
 		
 		String ans[] = new String[2*out.length];
 		for(int i=0;i<out.length;++i) {
+			if(out[i].length()== k)
 			ans[i] = out[i];
 		}
 		
 		for(int i=0;i<out.length;++i) {
+			if(out[i].length()== k-1)
 			ans[i+out.length] = str.charAt(0) + out[i];
 		}
 		
@@ -42,8 +45,22 @@ public class printSubsequences {
 		
 		
 	}
-	
-	
+	// case similar to printing the nodes of tree at kth level
+	//print k- length subsequences
+	public static void printSubsequencesOfKLength(String input,String output,int k) {
+		
+		if(k==0)
+			{System.out.println(output);
+			return;}
+		if(input.length()<k) {
+			return;
+		}
+		
+		printSubsequencesOfKLength(input.substring(1),output,k);
+		printSubsequencesOfKLength(input.substring(1),output+input.charAt(0),k-1);
+		
+		
+	}
 	
 	public static void main(String args[]) {
 		
@@ -51,13 +68,14 @@ public class printSubsequences {
 		Scanner scan =  new Scanner(System.in);
 		
 		str = scan.nextLine();
+		int k = 2;
 		
-//		String arr[] = getSubsequencesOfString(str);
+//		String arr[] = getSubsequencesOfString(str,k);
 //		//print subsequences
 //		for(String s:arr) {
 //			System.out.println(s);
 //		}
-		printSubsequencesOfString(str,"");
+		printSubsequencesOfKLength(str,"",3);
 		
 	}
 
